@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.zinc.datastoreexample.model"; // proto 파일을 통해 만들어질 객체가 저장될 위치를 적어준다.
+option java_multiple_files = true;
+
+message UserInfo {
+  string nickname = 1;
+  int32 id = 2;
+  string phone = 3;
+}
+
+message UsersInfo {
+  repeated UserInfo users = 1; // list 를 사용할 경우 repeated 를 사용하면 된다.
+}
